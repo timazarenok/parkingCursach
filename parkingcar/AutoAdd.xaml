@@ -1,0 +1,25 @@
+﻿<Window x:Class="parkingcar.AutoAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:parkingcar"
+        mc:Ignorable="d"
+        Title="AutoAdd" Height="350" Width="500">
+    <Grid>
+        <StackPanel>
+            <Label HorizontalContentAlignment="Center" FontSize="18" FontWeight="Bold">Добавление авто</Label>
+            <Label HorizontalContentAlignment="Center">Номер автомобиля</Label>
+            <TextBox x:Name="Number" Width="150" Height="20"/>
+            <Label HorizontalContentAlignment="Center">Тип авто</Label>
+            <ComboBox x:Name="Types" Width="150" Height="20"/>
+            <Label HorizontalContentAlignment="Center">Ширина</Label>
+            <TextBox x:Name="Width" Width="150" Height="20" PreviewTextInput="Width_PreviewTextInput"/>
+            <Label HorizontalContentAlignment="Center">Высота</Label>
+            <TextBox x:Name="Height" Width="150" Height="20" PreviewTextInput="Width_PreviewTextInput"/>
+            <Label HorizontalContentAlignment="Center">Длина</Label>
+            <TextBox x:Name="Lenght" Width="150" Height="20" PreviewTextInput="Width_PreviewTextInput"/>
+            <Button x:Name="Add" Width="150" Height="20" Click="Add_Click" Content="Добавить" Margin="0,10,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>

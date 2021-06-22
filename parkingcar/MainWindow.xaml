@@ -1,0 +1,25 @@
+﻿<Window x:Class="parkingcar.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:parkingcar"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel x:Name="Positions" Orientation="Horizontal" Width="500" HorizontalAlignment="Left" Height="400">
+            
+        </StackPanel>
+        <Label FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,5,100,0">Выберите автомобиль</Label>
+        <ListBox x:Name="Automobiles" Width="200" Margin="450,0,0,50" Height="300" MouseDoubleClick="Automobiles_MouseDoubleClick" ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <TextBlock Text="{Binding Number}" FontWeight="Bold" Foreground="Black" Margin="0,0,0,10"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button x:Name="AddAuto" Width="120" Height="20" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,100,30" Click="AddAuto_Click">Добавить авто</Button>
+    </Grid>
+</Window>

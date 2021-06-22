@@ -1,0 +1,19 @@
+﻿<Window x:Class="parkingcar.ParkingOtchet"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:parkingcar"
+        mc:Ignorable="d"
+        Title="ParkingOtchet" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="Excel" Width="150" Height="20" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20,0,0" Click="Excel_Click">Отчет в Ексель</Button>
+        <DataGrid x:Name="Otchet" Width="600" Height="350" Margin="0,50,0,0" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер места" Width="100" Binding="{Binding Path=Number}"/>
+                <DataGridTextColumn Header="Статус" Width="70" Binding="{Binding Path=Status}"/>
+                <DataGridTextColumn Header="Номер автомобиля" Width="13054" Binding="{Binding Path=AutoNumber}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
